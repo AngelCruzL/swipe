@@ -6,8 +6,9 @@
   --purple-2: #7000ff;
   --blue-1: #00d4ff;
   --primary-accent: #0a2540;
+  --primary-button-hover: #6d7b88;
   --bg-white: #fff;
-  --gb-light: #f7f9fc;
+  --bg-light: #f7f9fc;
 
   --body-font: 'Roboto', sans-serif;
   --heading-font: 'Anek Telugu', sans-serif;
@@ -26,6 +27,7 @@
   --p-height: 1.625rem;
   --secondary-text-size: 0.875rem;
   --secondary-text-height: 1.25rem;
+  --button-text-size: 1rem;
 
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
@@ -130,4 +132,54 @@ p {
   font-size: var(--secondary-text-size);
   line-height: var(--secondary-text-height);
   letter-spacing: 0.25px;
+}
+
+.primary-button {
+  padding-block: var(--spacing-sm);
+  padding-inline: var(--spacing-md);
+  border: none;
+  border-radius: 20px;
+  background-color: var(--primary-accent);
+  color: var(--text-light);
+  font-family: var(--body-font);
+  font-size: var(--button-text-size);
+  font-weight: bold;
+  letter-spacing: 1.25px;
+  transition: background-color 0.15s ease;
+}
+
+.primary-button:hover {
+  cursor: pointer;
+  background-color: var(--primary-button-hover);
+}
+
+.secondary-button {
+  border: none;
+  border-radius: 20px;
+  background-color: transparent;
+  color: var(--primary-accent);
+  font-family: var(--body-font);
+  font-size: var(--button-text-size);
+  font-weight: bold;
+  letter-spacing: 1.25px;
+  transition: opacity 0.15s ease;
+}
+
+.secondary-button:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.with-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.with-icon > img {
+  transition: transform 0.25s ease;
+}
+
+.with-icon:hover > img {
+  transform: translateX(5px);
 }
