@@ -2,6 +2,12 @@
   --text-dark: #000;
   --text-light: #fff;
   --text-grey: #adbdcc;
+  --purple-1: #6962f7;
+  --purple-2: #7000ff;
+  --blue-1: #00d4ff;
+  --primary-accent: #0a2540;
+  --bg-white: #fff;
+  --gb-light: #f7f9fc;
 
   --body-font: 'Roboto', sans-serif;
   --heading-font: 'Anek Telugu', sans-serif;
@@ -14,6 +20,20 @@
   --h4-size: 2rem;
   --h5-size: 1.75rem;
   --h6-size: 1.375rem;
+
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding-block-start: var(--spacing-sm);
+  width: 100%;
+  color: var(--text-dark);
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -67,4 +87,15 @@ h6 {
   font-family: var(--heading-font);
   font-size: var(--h6-size);
   font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: var(--purple-1);
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: var(--primary-accent);
 }
