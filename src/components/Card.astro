@@ -3,15 +3,16 @@ interface Props {
   icon: string;
   text: string;
   title: string;
+  textDark?: boolean;
 }
 
-const {title, text, icon,} = Astro.props;
+const {title, text, icon, textDark = false} = Astro.props;
 ---
 
 <article class="card">
   <img class="icon" src={icon} alt="">
   <h3>{title}</h3>
-  <p class="secondary-text">{text}</p>
+  <p class={'secondary-text' && textDark ? 'text-dark' : ''}>{text}</p>
   <slot name="button"/>
 </article>
 
@@ -21,8 +22,6 @@ const {title, text, icon,} = Astro.props;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-block: var(--spacing-sm);
-    padding-inline: var(--spacing-md) 0;
   }
 
   .card .icon {
@@ -37,5 +36,9 @@ const {title, text, icon,} = Astro.props;
     font-family: var(--heading-font);
     font-size: var(--h6-size);
     font-weight: 500;
+  }
+
+  .text-dark {
+    color: var(--text-dark);
   }
 </style>

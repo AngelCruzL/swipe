@@ -1,0 +1,32 @@
+---
+import {whySwipe} from "../data/why-swipe";
+import Card from "./Card.astro";
+---
+
+<section class="why-swipe-section" aria-labelledby="why-swipe-heading">
+  <div class="section-container">
+    <p class="subtitle">Why Swipe</p>
+    <h2 id="why-swipe-heading">A tech-first approach to finance</h2>
+
+    <div class="card-container">
+      {whySwipe.map(({title, description, icon}) => (
+        <Card title={title} text={description} icon={icon} textDark={true}/>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .card-container {
+    display: flex;
+    gap: var(--spacing-xl);
+    margin-block: var(--spacing-lg);
+  }
+
+  .card-container > * {
+    box-sizing: border-box;
+    margin-inline-start: var(--spacing-sm);
+    padding-inline-start: var(--spacing-md);
+    inline-size: 25%;
+  }
+</style>
