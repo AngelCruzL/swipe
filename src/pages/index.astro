@@ -1,3 +1,7 @@
+---
+import Navbar from "../components/Navbar.astro";
+---
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,35 +18,7 @@
   >
 </head>
 <body>
-<nav class="navbar">
-  <img alt="Swipe, inc." src="/assets/logo-white.svg">
+<Navbar/>
 
-  <ul class="menu">
-    <li><a href="#">Products</a></li>
-    <li><a href="#">Solutions</a></li>
-    <li><a href="#">Developers</a></li>
-    <li><a href="#">Resources</a></li>
-    <li><a href="#">Pricing</a></li>
-  </ul>
-
-  <button class="primary-button navbar-button">Sign In</button>
-</nav>
-
-<div class="hero">
-  <div class="section-container two-column">
-    <div class="col-left">
-      <h1>Payments infrastructure for the world</h1>
-      <p>
-        Millions of companies of all sizes—from startups to Fortune 500s—use
-        Swipe’s software and APIs to accept payments, send payouts, and manage
-        their businesses online.
-      </p>
-    </div>
-
-    <div class="col-right"></div>
-  </div>
-</div>
-
-<script src="/main.js" type="module"></script>
 </body>
 </html>
