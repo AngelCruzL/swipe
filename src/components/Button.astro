@@ -1,0 +1,77 @@
+---
+export type ButtonType = 'primary' | 'secondary';
+export type ButtonArrowColor = 'blue' | 'dark' | 'light' | 'purple';
+
+interface Props {
+  type: ButtonType;
+  text: string;
+  arrowColor?: ButtonArrowColor;
+}
+
+const {text, type = 'primary', arrowColor} = Astro.props;
+---
+
+<button
+  type="button"
+  aria-label={text}
+  class:list={[
+    {'primary-button': type === 'primary'},
+    {'secondary-button': type === 'secondary'},
+    {'with-icon': arrowColor}
+  ]}
+>
+  {text}
+  {arrowColor && <img src={`/assets/arrow-right-${arrowColor}.svg`} alt="">}
+</button>
+
+<style>
+  .primary-button {
+    padding-block: var(--spacing-sm);
+    padding-inline: var(--spacing-md);
+    border: none;
+    border-radius: 20px;
+    background-color: var(--primary-accent);
+    color: var(--text-light);
+    font-family: var(--body-font);
+    font-size: var(--button-text-size);
+    font-weight: bold;
+    letter-spacing: 1.25px;
+    transition: background-color 0.15s ease;
+  }
+
+  .primary-button:hover {
+    cursor: pointer;
+    background-color: var(--primary-button-hover);
+  }
+
+  .secondary-button {
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+    color: var(--primary-accent);
+    font-family: var(--body-font);
+    font-size: var(--button-text-size);
+    font-weight: bold;
+    letter-spacing: 1.25px;
+    transition: opacity 0.15s ease;
+  }
+
+  .secondary-button:hover {
+    cursor: pointer;
+    opacity: 0.75;
+  }
+
+  .with-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .with-icon > img {
+    transition: transform 0.25s ease;
+  }
+
+  .with-icon:hover > img {
+    transform: translateX(5px);
+  }
+</style>
