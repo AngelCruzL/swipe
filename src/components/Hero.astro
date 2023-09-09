@@ -1,5 +1,5 @@
 ---
-
+import Button from "./Button.astro";
 ---
 
 <div class="hero" aria-labelledby="page-title">
@@ -14,15 +14,8 @@
         </p>
 
         <div class="button-container">
-          <button class="primary-button with-icon">
-            Start now
-            <img src="/assets/arrow-right-light.svg" alt="">
-          </button>
-
-          <button class="secondary-button with-icon">
-            Contact sales
-            <img src="/assets/arrow-right-purple.svg" alt="">
-          </button>
+          <Button text="Start now" arrowColor="light"/>
+          <Button type="secondary" text="Contact sales" arrowColor="purple"/>
         </div>
       </div>
 
@@ -48,6 +41,7 @@
   }
 
   .hero-phone {
+    z-index: -1;
     block-size: 44rem;
   }
 </style>

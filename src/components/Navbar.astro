@@ -1,5 +1,5 @@
 ---
-
+import Button from "./Button.astro";
 ---
 
 <nav class="navbar">
@@ -13,7 +13,7 @@
     <li><a href="#">Pricing</a></li>
   </ul>
 
-  <button class="primary-button navbar-button" aria-label="Sign In" type="button">Sign In</button>
+  <Button className="navbar-button" text="Sign In"/>
 </nav>
 
 <style>
@@ -41,13 +41,5 @@
 
   .menu a:hover {
     text-decoration: underline;
-  }
-
-  .navbar-button {
-    background: rgba(250, 250, 250, 0.25);
-  }
-
-  .navbar-button:hover {
-    background: rgba(250, 250, 250, 0.5);
   }
 </style>
