@@ -46,7 +46,7 @@ body {
   margin: 0;
   padding-block-start: var(--spacing-sm);
   width: 100%;
-  background-color: var(--purple-1);
+  background-color: var(--bg-white);
   color: var(--text-dark);
   font-family: 'Roboto', sans-serif;
 }
@@ -122,6 +122,10 @@ p {
   line-height: var(--p-height);
 }
 
+main {
+  margin-block: var(--spacing-xl);
+}
+
 .section-container {
   margin-inline: auto;
   width: min(100%, var(--standard-width));
@@ -170,6 +174,12 @@ p {
   font-size: var(--secondary-text-size);
   line-height: var(--secondary-text-height);
   letter-spacing: 0.25px;
+}
+
+.button-container {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-block: var(--spacing-md);
 }
 
 .primary-button {
