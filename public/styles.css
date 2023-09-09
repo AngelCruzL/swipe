@@ -66,10 +66,8 @@ h2 {
   margin: 0;
   width: 100%;
   font-family: var(--heading-font);
-  font-size: var(--h2-size);
-  font-weight: 500;
-  line-height: var(--h2-height);
-  letter-spacing: -0.25px;
+  font-size: var(--h3-size);
+  font-weight: 600;
 }
 
 h3 {
