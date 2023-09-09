@@ -1,17 +1,18 @@
 ---
 interface Props {
-  icon: string;
   text: string;
   title: string;
+  icon?: string;
   textDark?: boolean;
+  verticalLine?: boolean;
 }
 
-const {title, text, icon, textDark = false} = Astro.props;
+const {title, text, icon, textDark = false, verticalLine = false} = Astro.props;
 ---
 
 <article class="card">
-  <img class="icon" src={icon} alt="">
-  <h3>{title}</h3>
+  {icon && <img class="icon" src={icon} alt="" loading="lazy">}
+  <h3 class={verticalLine ? 'vertical-line' : ''}>{title}</h3>
   <p class={'secondary-text' && textDark ? 'text-dark' : ''}>{text}</p>
   <slot name="button"/>
 </article>
@@ -40,5 +41,11 @@ const {title, text, icon, textDark = false} = Astro.props;
 
   .text-dark {
     color: var(--text-dark);
+  }
+
+  .vertical-line {
+    padding-inline-start: var(--spacing-sm);
+    border-inline-start: 2px solid var(--blue-1);
+    line-height: 28px;
   }
 </style>

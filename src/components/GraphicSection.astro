@@ -5,15 +5,21 @@
 <div class="graphic-section">
   <div class="section-container">
     <div class="graphic-grid">
-      <img src="/assets/credit-card.png" alt="" id="credit-card">
-      <img src="/assets/slack-invoice.png" alt="" id="slack-invoice">
-      <img src="/assets/phone.png" alt="" id="phone">
-      <img src="/assets/dash.png" alt="" id="dash">
+      <img loading="lazy" src="/assets/credit-card.png" alt="" id="credit-card">
+      <img loading="lazy" src="/assets/slack-invoice.png" alt="" id="slack-invoice">
+      <img loading="lazy" src="/assets/phone.png" alt="" id="phone">
+      <img loading="lazy" src="/assets/dash.png" alt="" id="dash">
     </div>
   </div>
 </div>
 
 <style>
+  .graphic-section {
+    display: flex;
+    justify-content: center;
+    inline-size: 100%;
+  }
+
   .graphic-grid {
     display: grid;
     grid-template-areas:

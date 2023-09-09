@@ -49,8 +49,8 @@ import Button from "./Button.astro";
       </div>
 
       <div class="col-right">
-        <img src="/assets/api-code.png" alt="" id="api-code">
-        <img src="/assets/terminal-code.png" alt="" id="terminal-code">
+        <img loading="lazy" src="/assets/api-code.png" alt="" id="api-code">
+        <img loading="lazy" src="/assets/terminal-code.png" alt="" id="terminal-code">
       </div>
     </div>
   </div>
@@ -58,6 +58,9 @@ import Button from "./Button.astro";
 
 <style>
   .integrations-section {
+    display: flex;
+    justify-content: center;
+    inline-size: 100%;
     background-color: var(--primary-accent);
     color: var(--text-light);
   }
