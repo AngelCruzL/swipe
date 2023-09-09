@@ -1,0 +1,84 @@
+---
+import Card from "./Card.astro";
+import Button from "./Button.astro";
+---
+
+<div class="integrations-section">
+  <div class="section-container">
+    <div class="two-column">
+      <div class="col-left">
+        <p class="subtitle-blue">Designed For Engineers</p>
+        <h2>The world's best and most intuitive API's</h2>
+
+        <p>
+          We abstract the hard stuff away so your teams don't can focus on building good technology,
+          instead of spending time and money reinventing the wheel.
+        </p>
+
+        <Button text="Start now" arrowColor="dark" class="integrations-button"/>
+
+        <div class="card-container">
+          <Card
+            icon="/assets/tools-icon.png"
+            title="Tools for all stacks"
+            text="We offer frontend and backend libraries in some or the most widely used technologies, old and new."
+          >
+            <Button
+              type="secondary"
+              text="See libraries"
+              arrowColor="blue"
+              slot="button"
+              class="integrations-secondary"
+            />
+          </Card>
+
+          <Card
+            icon="/assets/cube-icon.png"
+            title="Custom Integrations"
+            text="Use integrations for systems like Shopify, WooCommerce, NetSuite and more."
+          >
+            <Button
+              type="secondary"
+              text="Explore partners"
+              arrowColor="blue"
+              slot="button"
+              class="integrations-secondary"
+            />
+          </Card>
+        </div>
+      </div>
+
+      <div class="col-right">
+        <img src="/assets/api-code.png" alt="" id="api-code">
+        <img src="/assets/terminal-code.png" alt="" id="terminal-code">
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .integrations-section {
+    background-color: var(--primary-accent);
+    color: var(--text-light);
+  }
+
+  .card-container {
+    display: flex;
+    margin-block: var(--spacing-lg);
+  }
+
+  .card-container > * {
+    width: 50%;
+  }
+
+  .col-right {
+    gap: var(--spacing-lg);
+    align-items: flex-end;
+  }
+
+  #api-code,
+  #terminal-code {
+    max-inline-size: 30rem;
+    border-radius: 1.5rem;
+  }
+</style>

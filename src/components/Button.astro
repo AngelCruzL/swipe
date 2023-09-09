@@ -6,10 +6,10 @@ interface Props {
   type: ButtonType;
   text: string;
   arrowColor?: ButtonArrowColor;
-  className?: string;
+  class?: string;
 }
 
-const {text, type = 'primary', arrowColor, className} = Astro.props;
+const {text, type = 'primary', arrowColor, class: className} = Astro.props;
 ---
 
 <button
@@ -19,7 +19,9 @@ const {text, type = 'primary', arrowColor, className} = Astro.props;
     {'primary-button': type === 'primary'},
     {'secondary-button': type === 'secondary'},
     {'with-icon': arrowColor},
-    {'navbar-button': className === 'navbar-button'}
+    {'navbar-button': className === 'navbar-button'},
+    {'integrations-button': className === 'integrations-button'},
+    {'integrations-secondary': className === 'integrations-secondary'}
   ]}
 >
   {text}
@@ -83,5 +85,19 @@ const {text, type = 'primary', arrowColor, className} = Astro.props;
 
   .navbar-button:hover {
     background: rgba(250, 250, 250, 0.5);
+  }
+
+  .integrations-button {
+    margin-block-start: var(--spacing-md);
+    background-color: var(--blue-1);
+    color: var(--primary-accent);
+  }
+
+  .integrations-button:hover {
+    background-color: var(--bg-white);
+  }
+
+  .integrations-secondary {
+    color: var(--blue-1);
   }
 </style>
