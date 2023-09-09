@@ -1,0 +1,132 @@
+---
+import Button from "./Button.astro";
+---
+
+<section class="virtual-events-section" aria-labelledby="virtual-events-heading">
+  <div class="section-container">
+    <div class="two-column">
+      <div class="col-left">
+        <p class="subtitle">Virtual events</p>
+        <h2 id="virtual-events-heading">Check out Sessions now!</h2>
+
+        <p>
+          Swipe Sessions is our annual conference - it's now available to watch on demand! Check it out and
+          become an "internet economy" genius, and see how Swipe can transform the way you do business
+          online.
+        </p>
+        <Button text="Start now" arrowColor="light" class="virtual-events"/>
+      </div>
+
+      <div class="col-right">
+        <div class="swipe-sessions-card">
+          <div class="card-top">
+            <img id="sessions-logo" src="/assets/swipe-sessions.png" alt="">
+            <div class="avatars">
+              <img src="/assets/avatar1.png" alt="">
+              <img src="/assets/avatar2.png" alt="">
+            </div>
+          </div>
+
+          <div class="card-bottom">
+            <div class="card-content">
+              <p class="subtitle">Keynote</p>
+              <p class="secondary-text">
+                Everything you need to know about the internet economy
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .virtual-events-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-block: var(--spacing-xxl);
+  }
+
+  .virtual-events-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    block-size: 100%;
+    inline-size: 100%;
+    background-color: var(--bg-white);
+  }
+
+  .col-left {
+    padding-inline-end: var(--spacing-xl);
+    block-size: 28rem;
+  }
+
+  .swipe-sessions-card {
+    overflow: hidden;
+    inline-size: 34rem;
+    block-size: 28rem;
+    box-shadow: var(--standard-box-shadow);
+    border-radius: 1.25rem;
+  }
+
+  .card-top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    block-size: 50%;
+    inline-size: 100%;
+  }
+
+  .card-top::before {
+    content: "";
+    position: absolute;
+    top: -40%;
+    z-index: 1;
+    block-size: 150%;
+    inline-size: 100%;
+    background: var(--primary-gradient);
+    transform: skewY(-5deg);
+  }
+
+  #sessions-logo {
+    z-index: 2;
+    inline-size: 22rem;
+  }
+
+  .avatars {
+    position: absolute;
+    bottom: -4.5rem;
+    left: var(--spacing-xl);
+    z-index: 3;
+  }
+
+  .avatars img {
+    inline-size: 5rem;
+  }
+
+  .avatars img:nth-of-type(2) {
+    position: absolute;
+    left: 5.5rem;
+  }
+
+  .card-bottom {
+    box-sizing: border-box;
+    block-size: 50%;
+    inline-size: 100%;
+    padding: var(--spacing-xl);
+  }
+
+  .subtitle {
+    margin-block-start: var(--spacing-lg);
+  }
+
+  .secondary-text {
+    inline-size: 50%;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+</style>

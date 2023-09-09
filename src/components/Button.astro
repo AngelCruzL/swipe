@@ -21,7 +21,8 @@ const {text, type = 'primary', arrowColor, class: className} = Astro.props;
     {'with-icon': arrowColor},
     {'navbar-button': className === 'navbar-button'},
     {'integrations-button': className === 'integrations-button'},
-    {'integrations-secondary': className === 'integrations-secondary'}
+    {'integrations-secondary': className === 'integrations-secondary'},
+    {'virtual-events': className === 'virtual-events'},
   ]}
 >
   {text}
@@ -99,5 +100,14 @@ const {text, type = 'primary', arrowColor, class: className} = Astro.props;
 
   .integrations-secondary {
     color: var(--blue-1);
+  }
+
+  .virtual-events {
+    margin-block-start: var(--spacing-md);
+    background-color: var(--purple-1);
+  }
+
+  .virtual-events:hover {
+    background-color: var(--primary-accent);
   }
 </style>
