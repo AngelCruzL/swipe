@@ -1,0 +1,50 @@
+---
+
+---
+
+<div class="graphic-section">
+  <div class="section-container">
+    <div class="graphic-grid">
+      <img src="/assets/credit-card.png" alt="" id="credit-card">
+      <img src="/assets/slack-invoice.png" alt="" id="slack-invoice">
+      <img src="/assets/phone.png" alt="" id="phone">
+      <img src="/assets/dash.png" alt="" id="dash">
+    </div>
+  </div>
+</div>
+
+<style>
+  .graphic-grid {
+    display: grid;
+    grid-template-areas:
+    "card slack slack"
+    "phone slack slack"
+    "phone dash dash";
+    gap: var(--spacing-lg);
+    padding-block: var(--spacing-lg);
+  }
+
+  #credit-card {
+    grid-area: card;
+    width: 100%;
+    box-shadow: var(--standard-box-shadow);
+  }
+
+  #slack-invoice {
+    grid-area: slack;
+    width: 100%;
+    box-shadow: var(--standard-box-shadow);
+  }
+
+  #phone {
+    grid-area: phone;
+    width: 100%;
+    box-shadow: var(--standard-box-shadow);
+  }
+
+  #dash {
+    grid-area: dash;
+    width: 100%;
+    box-shadow: var(--standard-box-shadow);
+  }
+</style>
