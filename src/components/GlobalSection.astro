@@ -40,9 +40,20 @@ import Card from "./Card.astro";
     display: flex;
     justify-content: center;
     inline-size: 100%;
-    padding-block: calc(var(--spacing-xl) * 3);
-    background-color: var(--primary-accent);
+    padding-block-start: calc(var(--spacing-xl) * 3);
     color: var(--text-light);
+  }
+
+  .global-section::before {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    z-index: -1;
+    inline-size: 100%;
+    block-size: 75rem;
+    background-color: var(--primary-accent);
+    transform: skewY(-10deg);
   }
 
   .card-container {

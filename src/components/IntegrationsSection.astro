@@ -58,11 +58,25 @@ import Button from "./Button.astro";
 
 <style>
   .integrations-section {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: center;
+    padding-block: calc(var(--spacing-xl) * 3);
     inline-size: 100%;
-    background-color: var(--primary-accent);
     color: var(--text-light);
+  }
+
+  .integrations-section::after {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    z-index: -1;
+    inline-size: 100%;
+    block-size: 68.75rem;
+    background-color: var(--primary-accent);
+    transform: skewY(-10deg);
   }
 
   .card-container {
