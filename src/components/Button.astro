@@ -23,6 +23,8 @@ const {text, type = 'primary', arrowColor, class: className} = Astro.props;
     {'integrations-button': className === 'integrations-button'},
     {'integrations-secondary': className === 'integrations-secondary'},
     {'virtual-events': className === 'virtual-events'},
+    {'getting-started': className === 'getting-started'},
+    {'purple-button': className === 'purple-button'}
   ]}
 >
   {text}
@@ -102,12 +104,17 @@ const {text, type = 'primary', arrowColor, class: className} = Astro.props;
     color: var(--blue-1);
   }
 
-  .virtual-events {
+  .virtual-events, .getting-started {
     margin-block-start: var(--spacing-md);
     background-color: var(--purple-1);
   }
 
-  .virtual-events:hover {
+  .virtual-events:hover, .getting-started:hover {
     background-color: var(--primary-accent);
+  }
+
+  .purple-button {
+    color: var(--purple-2);
+    padding-left: 0;
   }
 </style>

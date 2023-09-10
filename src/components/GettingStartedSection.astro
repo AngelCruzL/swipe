@@ -1,0 +1,73 @@
+---
+import Button from "./Button.astro";
+import Card from "./Card.astro";
+---
+
+<section class="getting-started-section" aria-labelledby="getting-started-heading">
+  <div class="section-container">
+    <div class="two-column">
+      <div class="col-left">
+        <h2 id="getting-started-heading">What are you waiting for?</h2>
+        <p>
+          Explore <a href="/">Swipe</a> now, or create an account and start accepting payments today! If
+          you need a custom package for your business, let's chat today.
+        </p>
+        <Button text="Start now" arrowColor="light" class="getting-started"/>
+      </div>
+
+      <div class="col-right">
+        <Card
+          icon="/assets/shield-icon.png"
+          title="Always know what you pay"
+          text="Integrated per-transaction pricing with no hidden fees."
+        >
+          <Button
+            text="Pricing details"
+            arrowColor="purple"
+            type="secondary"
+            slot="button"
+            class="purple-button"
+          />
+        </Card>
+
+        <Card
+          icon="/assets/bars-icon.png"
+          title="Start your integration"
+          text="Get up and running with Stripe in as little as 10 minutes."
+        >
+          <Button
+            text="API reference"
+            arrowColor="purple"
+            type="secondary"
+            slot="button"
+            class="purple-button"
+          />
+        </Card>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .getting-started-section {
+    display: flex;
+    justify-content: center;
+    padding-block: var(--spacing-xl);
+  }
+
+  .col-left {
+    padding-inline-end: var(--spacing-xl);
+  }
+
+  .col-right {
+    flex-direction: row;
+    gap: var(--spacing-lg);
+  }
+
+  .col-right .card {
+    box-sizing: border-box;
+    inline-size: 50%;
+    padding: 0 var(--spacing-sm) 0 0;
+    margin: 0 var(--spacing-md) 0 0;
+  }
+</style>

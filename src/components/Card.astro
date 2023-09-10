@@ -13,7 +13,7 @@ const {title, text, icon, textDark = false, verticalLine = false} = Astro.props;
 <article class="card">
   {icon && <img class="icon" src={icon} alt="" loading="lazy">}
   <h3 class={verticalLine ? 'vertical-line' : ''}>{title}</h3>
-  <p class={'secondary-text' && textDark ? 'text-dark' : ''}>{text}</p>
+  <p class={textDark ? 'secondary-text text-dark' : 'secondary-text'}>{text}</p>
   <slot name="button"/>
 </article>
 
