@@ -67,6 +67,17 @@ import Button from "./Button.astro";
     color: var(--text-light);
   }
 
+  .integrations-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    inline-size: 100%;
+    block-size: 50%;
+    background-color: var(--bg-light);
+  }
+
   .integrations-section::after {
     content: '';
     position: absolute;
