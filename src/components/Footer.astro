@@ -1,0 +1,85 @@
+---
+import {footerLinksData, footerLocationData} from "../data/footer";
+---
+
+<footer class="footer">
+  <div class="section-container">
+    <div class="col">
+      <img src="/assets/logo-dark.svg" alt="" id="footer-logo">
+      {footerLocationData.map(({icon, title, link}) => (
+        <div class="icon-link">
+          <img src={icon} alt="">
+          <a href={link}>{title}</a>
+        </div>
+      ))}
+    </div>
+
+    {footerLinksData.map(({title, links}) => (
+      <div class="col">
+        <h3>{title}</h3>
+        <ul>
+          {links.map(link => (
+            <li><a href="#">{link}</a></li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</footer>
+
+<style>
+  .footer {
+    display: flex;
+    justify-content: center;
+    padding-block: var(--spacing-xl);
+    background-color: var(--bg-light);
+  }
+
+  .section-container {
+    display: flex;
+  }
+
+  #footer-logo {
+    max-inline-size: 6.75rem;
+    margin: 0 0 var(--spacing-md) 0;
+  }
+
+  .col {
+    inline-size: 25%;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin-block: var(--spacing-md);
+  }
+
+  a {
+    font-weight: normal;
+    color: var(--text-dark);
+  }
+
+  a:hover {
+    color: var(--purple-1);
+    text-decoration: underline;
+  }
+
+  .icon-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-block: var(--spacing-md);
+  }
+
+  .icon-link img {
+    block-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: var(--h6-size);
+    font-weight: 700;
+  }
+</style>

@@ -132,7 +132,7 @@ p {
 }
 
 main {
-  margin-block: var(--spacing-xl);
+  margin-block-start: var(--spacing-xl);
 }
 
 .section-container {
