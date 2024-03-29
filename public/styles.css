@@ -48,8 +48,17 @@
   --spacing-xxl: 8rem;
 }
 
+@media only screen and (max-width: 768px) {
+  :root {
+    --h1-size: 4rem;
+    --h1-height: 4.5rem;
+    --h3-size: 2.125rem;
+  }
+}
+
 body {
   box-sizing: border-box;
+  /*overflow-x: hidden;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,6 +147,12 @@ main {
 .section-container {
   margin-inline: auto;
   width: min(100%, var(--standard-width));
+}
+
+@media only screen and (max-width: 1144px) {
+  .section-container {
+    padding-inline: var(--spacing-md);
+  }
 }
 
 .two-column {
